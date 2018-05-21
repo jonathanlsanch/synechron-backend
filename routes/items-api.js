@@ -72,7 +72,7 @@ router.get('/items/:id', (req, res) => {
         warranty: req.body.warranty
     };
     
-    Item.findByIdAndUpdate(req.params.id, updates, (err) => {
+    Item.findByIdAndUpdate(req.params.id, updates, err => {
       if (err) {
         res.json(err);
         return;
